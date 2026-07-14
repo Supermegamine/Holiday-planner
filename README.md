@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Family Holiday Planner
 
-## Getting Started
+A polished, modern web app for planning family holidays and organizing activities for each day of a trip. The experience is designed to feel simple and approachable while still supporting real shared planning workflows.
 
-First, run the development server:
+## What the app does
+
+Family Holiday Planner helps users:
+
+- Create and manage holiday trips with a start and end date
+- View each holiday in a clear, structured layout
+- Add activities for specific days, including title, description, time, and location
+- Switch between agenda and calendar-style views for easier trip planning
+- Save and manage trip information through a shared Supabase-backed backend
+
+This project is a strong example of a full-stack React application with a clean UI, user-friendly interactions, and practical data handling for everyday planning.
+
+## Live demo
+
+Try the deployed version here:
+
+- https://holidayplanner-eta.vercel.app/
+
+## How employers can test it
+
+1. Open the live app link above.
+2. Enter a name when prompted so the planner can associate your entries.
+3. Create a new holiday by adding a title and travel date range.
+4. Open the holiday and add a few activities for different days.
+5. Test editing and deleting entries to confirm the full workflow.
+6. Explore the calendar and agenda views to see how the planning experience feels across devices.
+
+## Local development
+
+If you want to run the app locally:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Supabase
 
-## Learn More
+## Project goal
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app demonstrates a practical, user-focused product built around planning, organization, and a smooth multi-step experience for families preparing for holidays.
