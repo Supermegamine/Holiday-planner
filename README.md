@@ -14,11 +14,6 @@ Family Holiday Planner helps users:
 
 This project is a strong example of a full-stack React application with a clean UI, user-friendly interactions, and practical data handling for everyday planning.
 
-## Live demo
-
-Try the deployed version here:
-
-- https://holidayplanner-eta.vercel.app/
 
 ## How employers can test it
 
