@@ -1,48 +1,56 @@
-# Family Holiday Planner
+# Family Holiday Planner — Static Demo
 
-A polished, modern web app for planning family holidays and organizing activities for each day of a trip. The experience is designed to feel simple and approachable while still supporting real shared planning workflows.
+This branch contains a database-free demo of the Family Holiday Planner, built as a static Next.js export and deployed with GitHub Pages.
 
-## What the app does
+## Expected demo URL
 
-Family Holiday Planner helps users:
+https://supermegamine.github.io/Holiday-planner/
 
-- Create and manage holiday trips with a start and end date
-- View each holiday in a clear, structured layout
-- Add activities for specific days, including title, description, time, and location
-- Switch between agenda and calendar-style views for easier trip planning
-- Save and manage trip information through a shared Supabase-backed backend
+The URL becomes available after the first successful Pages deployment.
 
-This project is a strong example of a full-stack React application with a clean UI, user-friendly interactions, and practical data handling for everyday planning.
+## Demo behavior
 
+- Sample trips for Copenhagen, Crete, and the Alps, including daily activities.
+- Create, edit, and delete trips.
+- Open a trip to explore its agenda on mobile or calendar on larger screens.
+- Add, edit, and delete activities for each day.
+- Data is stored in this browser's `localStorage`; it is never sent to Supabase or a server and is not shared with other visitors.
+- On a later visit, trip date ranges and their dated activities roll forward by the elapsed number of days. The relative day-by-day itinerary stays intact.
+- Use **Reset sample data** in the banner to restore the built-in sample trips.
 
-## How employers can test it
+There is no database, API server, or runtime backend in this demo. The original Supabase-backed application remains on `main`.
 
-1. Open the live app link above.
-2. Enter a name when prompted so the planner can associate your entries.
-3. Create a new holiday by adding a title and travel date range.
-4. Open the holiday and add a few activities for different days.
-5. Test editing and deleting entries to confirm the full workflow.
-6. Explore the calendar and agenda views to see how the planning experience feels across devices.
+## Deploy
 
-## Local development
+The workflow at `.github/workflows/deploy-demo.yml` builds the Next.js app as a static export and deploys the `out/` directory to GitHub Pages whenever `demo/github-pages` is updated.
 
-If you want to run the app locally:
+One-time setup, if GitHub Pages is not already enabled:
+
+1. Open **Settings → Pages** in the repository.
+2. Set the source to **GitHub Actions**.
+3. Open **Settings → Environments → github-pages**.
+4. Under **Deployment branches and tags**, allow the `demo/github-pages` branch (or allow all branches).
+5. Push a commit to `demo/github-pages` or run **Deploy Holiday Planner demo to GitHub Pages** from the Actions tab.
+
+The Next.js configuration uses `/Holiday-planner` as the base path for the repository's project Pages URL.
+
+## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Then open http://localhost:3000 in your browser.
+To verify the production export:
 
-## Tech stack
+```bash
+npm run build
+npx serve out
+```
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Supabase
+## Notes
 
-## Project goal
-
-The app demonstrates a practical, user-focused product built around planning, organization, and a smooth multi-step experience for families preparing for holidays.
+- The dynamic `/holidays/[id]` route is replaced with a static `/holiday/?id=...` route so newly created trips work on static hosting.
+- The data store seeds the browser on first visit and preserves user changes in local storage.
+- Clearing browser storage resets the demo.
+- Sample names, trips, and activities are fictional. Avoid entering personal or sensitive information.
