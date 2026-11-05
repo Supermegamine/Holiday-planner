@@ -2,7 +2,7 @@
 
 A polished, modern web app for planning family holidays and organizing activities for each day of a trip. The experience is designed to feel simple and approachable while still supporting real shared planning workflows.
 
-## What the app does
+## What the app does 
 
 Family Holiday Planner helps users:
 
