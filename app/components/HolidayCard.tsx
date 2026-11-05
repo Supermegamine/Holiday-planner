@@ -15,7 +15,7 @@ export default function HolidayCard({
 }) {
   return (
     <div className="flex items-center justify-between gap-3 rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-      <Link href={`/holidays/${holiday.id}`} className="min-w-0 flex-1">
+      <Link href={`/holiday?id=${encodeURIComponent(holiday.id)}`} className="min-w-0 flex-1">
         <h3 className="font-medium text-zinc-900">{holiday.title}</h3>
         <p className="mt-0.5 text-sm text-zinc-500">
           {formatDateRange(holiday.start_date, holiday.end_date)}
