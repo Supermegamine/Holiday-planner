@@ -1,5 +1,5 @@
 # Family Holiday Planner — Static Demo
-
+ 
 This branch contains a database-free demo of the Family Holiday Planner, built as a static Next.js export and deployed with GitHub Pages.
 
 ## Expected demo URL
